@@ -11,25 +11,25 @@
 
 <!-- What domain did you choose? Why is this knowledge valuable and hard to find through official channels? -->
 
----
+My domain was off campus housing experience in Texas State University. When searching for answers it was hard to find because I was bombarded by apartment complexes using the search as a marketing avenue. The words that were used in the search did not filter out apartment complexes with the key words.
 
 ## Documents
 
 <!-- List your specific sources: URLs, subreddit names, forum threads, or file descriptions.
      Aim for at least 10 sources that together cover different subtopics or perspectives within your domain. -->
 
-| # | Source | Description | URL or location |
-|---|--------|-------------|-----------------|
-| 1 | | | |
-| 2 | | | |
-| 3 | | | |
-| 4 | | | |
-| 5 | | | |
-| 6 | | | |
-| 7 | | | |
-| 8 | | | |
-| 9 | | | |
-| 10 | | | |
+| #   | Source                 | Description                                                                 | URL or location                                                                                      |
+| --- | ---------------------- | --------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| 1   | Reddit                 | Thread about housing                                                        | https://www.reddit.com/r/txstate/comments/1llyjp9/off_campus_housing/                                |
+| 2   | Reddit                 | Thread asking about 4 bedroom apt                                           | https://www.reddit.com/r/txstate/comments/1hjd6ez/off_campus_housing/                                |
+| 3   | Texas State University | University info page                                                        | https://offcampushousing.txstate.edu                                                                 |
+| 4   | Reddit                 | Thread about horrible housing reviews                                       | https://www.reddit.com/r/txstate/comments/1bh90an/offcampus_housing/                                 |
+| 5   | Grove Apartment        | Apartment complex off campus offering housing                               | https://groveatsanmarcos.com/                                                                        |
+| 6   | Reddit                 | Looking for apartements that are affordable                                 | https://www.reddit.com/r/txstate/comments/1nep0pi/off_campus_housing/                                |
+| 7   | Reddit                 | Asking how off campuses expenses are                                        | https://www.reddit.com/r/txstate/comments/1l25m3k/what_are_off_campus_expenses_like/                 |
+| 8   | Reddit                 | Asking how to start looking for apartments                                  |                                                                                                      |
+| 9   | Facebook Post          | Looking for a 1 bed 1 bath apartment post                                   | https://www.facebook.com/groups/TXSTSubleasesRoommates/posts/2866319006910091/                       |
+| 10  | The University Star    | Article on how the University should be more involved in off campus housing | https://universitystar.com/21135/opinions/texas-state-should-be-more-involved-in-off-campus-housing/ |
 
 ---
 
@@ -41,10 +41,11 @@
      A review-heavy corpus warrants different chunking than a long FAQ. -->
 
 **Chunk size:**
-
+100 characters
 **Overlap:**
-
+40 characters
 **Reasoning:**
+200 character chunck size would be good because they are going to be small sentences on reviews from reddit. 40 character overlap would preserve cross boundary relationships.
 
 ---
 
@@ -57,10 +58,11 @@
      support, accuracy on domain-specific text, latency? -->
 
 **Embedding model:**
-
+bge-base-en-v1.5 via sentence transformer
 **Top-k:**
-
+5
 **Production tradeoff reflection:**
+If you set the Top-K the return will be return irrelevant chunks. If it is too high you will have alot of noise in your results.
 
 ---
 
@@ -71,13 +73,13 @@
      is right or wrong. "What are good dining halls?" is too vague.
      "What do students say about wait times at [dining hall name] during lunch?" is testable. -->
 
-| # | Question | Expected answer |
-|---|----------|-----------------|
-| 1 | | |
-| 2 | | |
-| 3 | | |
-| 4 | | |
-| 5 | | |
+| #   | Question                                                                                   | Expected answer                                     |
+| --- | ------------------------------------------------------------------------------------------ | --------------------------------------------------- |
+| 1   | What apartment complex should be avoided when living off campus at Texas State University? | Redpoint, The Outpost                               |
+| 2   | What are the cost of apartments outside of Texas State?                                    | 650.00 per month, 820.00 per month, 739 per month   |
+| 3   | Does Texas State University have a guide to help choose a place to live off campus?        | Yes, Texas State has a guide to live off campus     |
+| 4   | What ammenities can you get by living off campus?                                          | 24 hour gym, resort-style pool, recreational courts |
+| 5   | how safe are the complexes off campus?                                                     | Some have car breakins, scorpions                   |
 
 ---
 
@@ -87,9 +89,9 @@
      Consider: noisy or inconsistent documents, missing source attribution, off-topic
      retrieval, chunks that split key information across boundaries. -->
 
-1.
+1. Because of the question being so filtered it might not result in off topic retrivals.
 
-2.
+2. We can also get incosistent documents because the key words used are used for marketing.
 
 ---
 
@@ -100,6 +102,8 @@
      Label each stage with the tool or library you're using.
      You can use ASCII art, a Mermaid diagram, or embed a sketch as an image.
      You'll use this diagram as context when prompting AI tools to implement each stage. -->
+
+Text Documents --> chunking 300 characters --> bge-base-en-v1.5 --> Chroma--> Knowledge Ingestion --> Genration
 
 ---
 
