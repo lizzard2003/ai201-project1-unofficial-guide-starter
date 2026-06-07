@@ -120,6 +120,7 @@ Text Documents --> chunking 300 characters --> bge-base-en-v1.5 --> Chroma--> Kn
      with my specified chunk size and overlap" is a plan. -->
 
 I will use Claude to help with my chuncking strategy and have it chuck at the 200 character size with an overlap of 40. I will then analyze the return. Compare the questions and answers.
+
 **Milestone 3 — Ingestion and chunking:**
 
 **Milestone 4 — Embedding and retrieval:**
