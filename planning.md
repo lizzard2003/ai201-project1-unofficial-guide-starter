@@ -27,7 +27,7 @@ My domain was off campus housing experience in Texas State University. When sear
 | 5   | Grove Apartment        | Apartment complex off campus offering housing                               | https://groveatsanmarcos.com/                                                                        |
 | 6   | Reddit                 | Looking for apartements that are affordable                                 | https://www.reddit.com/r/txstate/comments/1nep0pi/off_campus_housing/                                |
 | 7   | Reddit                 | Asking how off campuses expenses are                                        | https://www.reddit.com/r/txstate/comments/1l25m3k/what_are_off_campus_expenses_like/                 |
-| 8   | Reddit                 | Asking how to start looking for apartments                                  |                                                                                                      |
+| 8   | Reddit                 | Asking how to start looking for apartments                                  | https://www.reddit.com/r/txstate/comments/1p0e77p/off_campus_housijg/                                |
 | 9   | Facebook Post          | Looking for a 1 bed 1 bath apartment post                                   | https://www.facebook.com/groups/TXSTSubleasesRoommates/posts/2866319006910091/                       |
 | 10  | The University Star    | Article on how the University should be more involved in off campus housing | https://universitystar.com/21135/opinions/texas-state-should-be-more-involved-in-off-campus-housing/ |
 
