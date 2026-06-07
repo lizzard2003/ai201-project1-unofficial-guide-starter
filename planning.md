@@ -103,7 +103,7 @@ If you set the Top-K the return will be return irrelevant chunks. If it is too h
      You can use ASCII art, a Mermaid diagram, or embed a sketch as an image.
      You'll use this diagram as context when prompting AI tools to implement each stage. -->
 
-Text Documents --> chunking 300 characters --> bge-base-en-v1.5 --> Chroma--> Knowledge Ingestion --> Genration
+Text Documents --> chunking 300 characters --> bge-base-en-v1.5 --> Chroma--> Knowledge Ingestion --> Generation
 
 ---
 
@@ -119,6 +119,7 @@ Text Documents --> chunking 300 characters --> bge-base-en-v1.5 --> Chroma--> Kn
      "I'll give Claude my Chunking Strategy section and ask it to implement chunk_text()
      with my specified chunk size and overlap" is a plan. -->
 
+I will use Claude to help with my chuncking strategy and have it chuck at the 200 character size with an overlap of 40. I will then analyze the return. Compare the questions and answers.
 **Milestone 3 — Ingestion and chunking:**
 
 **Milestone 4 — Embedding and retrieval:**
