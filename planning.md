@@ -45,7 +45,7 @@ My domain was off campus housing experience in Texas State University. When sear
 **Overlap:**
 40 characters
 **Reasoning:**
-200 character chunck size would be good because they are going to be small sentences on reviews from reddit. 40 character overlap would preserve cross boundary relationships.
+100 character chunck size would be good because they are going to be small sentences on reviews from reddit. 40 character overlap would preserve cross boundary relationships.
 
 ---
 
@@ -73,13 +73,13 @@ If you set the Top-K the return will be return irrelevant chunks. If it is too h
      is right or wrong. "What are good dining halls?" is too vague.
      "What do students say about wait times at [dining hall name] during lunch?" is testable. -->
 
-| #   | Question                                                                                   | Expected answer                                     |
-| --- | ------------------------------------------------------------------------------------------ | --------------------------------------------------- |
-| 1   | What apartment complex should be avoided when living off campus at Texas State University? | Redpoint, The Outpost                               |
-| 2   | What are the cost of apartments outside of Texas State?                                    | 650.00 per month, 820.00 per month, 739 per month   |
-| 3   | Does Texas State University have a guide to help choose a place to live off campus?        | Yes, Texas State has a guide to live off campus     |
-| 4   | What ammenities can you get by living off campus?                                          | 24 hour gym, resort-style pool, recreational courts |
-| 5   | how safe are the complexes off campus?                                                     | Some have car breakins, scorpions                   |
+| #   | Question                                                                            | Expected answer                                     |
+| --- | ----------------------------------------------------------------------------------- | --------------------------------------------------- |
+| 1   | Price of off campus living?                                                         | economical and independent                          |
+| 2   | What apartments prices do students discuss outside of Texas State?                  | 650.00 per month, 820.00 per month, 739 per month   |
+| 3   | Does Texas State University have a guide to help choose a place to live off campus? | Yes, Texas State has a guide to live off campus     |
+| 4   | What ammenities can you get by living off campus?                                   | 24 hour gym, resort-style pool, recreational courts |
+| 5   | how safe are the complexes off campus?                                              | Some have car breakins, scorpions                   |
 
 ---
 
@@ -103,7 +103,7 @@ If you set the Top-K the return will be return irrelevant chunks. If it is too h
      You can use ASCII art, a Mermaid diagram, or embed a sketch as an image.
      You'll use this diagram as context when prompting AI tools to implement each stage. -->
 
-Text Documents --> chunking 300 characters --> bge-base-en-v1.5 --> Chroma--> Knowledge Ingestion --> Generation
+Text Documents --> chunking 100 characters --> bge-base-en-v1.5 --> Chroma--> Knowledge Ingestion --> Generation
 
 ---
 
@@ -119,7 +119,7 @@ Text Documents --> chunking 300 characters --> bge-base-en-v1.5 --> Chroma--> Kn
      "I'll give Claude my Chunking Strategy section and ask it to implement chunk_text()
      with my specified chunk size and overlap" is a plan. -->
 
-I will use Claude to help with my chuncking strategy and have it chuck at the 200 character size with an overlap of 40. I will then analyze the return. Compare the questions and answers.
+I will use CHATGPT to help with my chuncking strategy and have it chuck at the 200 character size with an overlap of 40. I will then analyze the return. Compare the questions and answers.
 
 **Milestone 3 — Ingestion and chunking:**
 
